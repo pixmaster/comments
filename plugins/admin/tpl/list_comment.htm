@@ -2,27 +2,27 @@
  <% for(i=0;i<comment_list.length;i++) { %>
    <div class="comment_item_area" id="item<%=i%>">
    <div class="comment_title_area">
-    <div><b>Автор:</b> <%=(comment_list[i].Name?comment_list[i].Name:comment_list[i].Login)%></div>
-    <div><b>Дата:</b> <%=comment_list[i].CommentDate%> <%=comment_list[i].CommentTime%>
-     <input type="button" value="удалить" onclick="DeleteComment('item<%=i%>',<%=comment_list[i].CommentID%>,this)" class="btn">
-     <input type="button" value="разрешить" onclick="OpenComment('item<%=i%>',<%=comment_list[i].CommentID%>,this)" class="btn">
+    <div><b>РђРІС‚РѕСЂ:</b> <%=(comment_list[i].Name?comment_list[i].Name:comment_list[i].Login)%></div>
+    <div><b>Р”Р°С‚Р°:</b> <%=comment_list[i].CommentDate%> <%=comment_list[i].CommentTime%>
+     <input type="button" value="СѓРґР°Р»РёС‚СЊ" onclick="DeleteComment('item<%=i%>',<%=comment_list[i].CommentID%>,this)" class="btn">
+     <input type="button" value="СЂР°Р·СЂРµС€РёС‚СЊ" onclick="OpenComment('item<%=i%>',<%=comment_list[i].CommentID%>,this)" class="btn">
     </div>
    </div>
    <ul>
     <% if (comment_list[i].SaleDate != "") {%>
-     <li><b>Время покупки:</b> <%=comment_list[i].SaleDate%>
+     <li><b>Р’СЂРµРјСЏ РїРѕРєСѓРїРєРё:</b> <%=comment_list[i].SaleDate%>
     <% } %>
     <% if (comment_list[i].StrongPoints != "") {%>
-     <li><b>Сильные стороны:</b> <%=comment_list[i].StrongPoints%>
+     <li><b>РЎРёР»СЊРЅС‹Рµ СЃС‚РѕСЂРѕРЅС‹:</b> <%=comment_list[i].StrongPoints%>
     <% } %>
     <% if (comment_list[i].WeakPoints != "") {%>
-     <li><b>Слабые стороны:</b> <%=comment_list[i].WeakPoints%>
+     <li><b>РЎР»Р°Р±С‹Рµ СЃС‚РѕСЂРѕРЅС‹:</b> <%=comment_list[i].WeakPoints%>
     <% } %>
     <% if (comment_list[i].Analogs != "") {%>
-     <li><b>Использованные аналоги:</b> <%=comment_list[i].Analogs%>
+     <li><b>РСЃРїРѕР»СЊР·РѕРІР°РЅРЅС‹Рµ Р°РЅР°Р»РѕРіРё:</b> <%=comment_list[i].Analogs%>
     <% } %>
     <% if (comment_list[i].CommentText != "") {%>
-     <li><b>Комментарий:</b> <%=comment_list[i].CommentText%>
+     <li><b>РљРѕРјРјРµРЅС‚Р°СЂРёР№:</b> <%=comment_list[i].CommentText%>
     <% } %>
    </ul>
    <div class="comment_image_area">

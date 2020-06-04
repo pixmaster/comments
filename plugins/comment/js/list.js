@@ -6,7 +6,7 @@ function AddCommentForm()
    {}
   else
    {
-    var oBox = new BoxClass("&nbsp;Форма добавления комментария",475,620,true,document.body.scrollTop,coord.x);
+    var oBox = new BoxClass("&nbsp;Р¤РѕСЂРјР° РґРѕР±Р°РІР»РµРЅРёСЏ РєРѕРјРјРµРЅС‚Р°СЂРёСЏ",475,620,true,document.body.scrollTop,coord.x);
     setGlobal("comment_box",oBox);
    }
 
@@ -22,7 +22,7 @@ function CommentSave(oBtn)
  {
   function ErrorAuth()
    {
-    alert("Ошибка авторизации!\r\nНеверный логин или пароль");
+    alert("РћС€РёР±РєР° Р°РІС‚РѕСЂРёР·Р°С†РёРё!\r\nРќРµРІРµСЂРЅС‹Р№ Р»РѕРіРёРЅ РёР»Рё РїР°СЂРѕР»СЊ");
     oBtn.disabled = false;
    }
 
@@ -71,7 +71,7 @@ function CommentSave(oBtn)
 
       if (result_upload != 200)
        {
-        alert(result_upload+"\r\nКомментарий не добавлен, исправте ошибки с картинками");
+        alert(result_upload+"\r\nРљРѕРјРјРµРЅС‚Р°СЂРёР№ РЅРµ РґРѕР±Р°РІР»РµРЅ, РёСЃРїСЂР°РІС‚Рµ РѕС€РёР±РєРё СЃ РєР°СЂС‚РёРЅРєР°РјРё");
         oBtn.disabled = false;
         setGlobal("result_upload",false);
         getElementById("upload_file_frame").location = "about:blank";
@@ -87,11 +87,11 @@ function CommentSave(oBtn)
    {
     if (oResponseVars.result == 1)
      {
-      alert("Коментарий добавлен, будет виден после проверки администратором");
+      alert("РљРѕРјРµРЅС‚Р°СЂРёР№ РґРѕР±Р°РІР»РµРЅ, Р±СѓРґРµС‚ РІРёРґРµРЅ РїРѕСЃР»Рµ РїСЂРѕРІРµСЂРєРё Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂРѕРј");
 
       if (oResponseVars.resultRating == 0)
        {
-        alert("Вы уже голосовали");
+        alert("Р’С‹ СѓР¶Рµ РіРѕР»РѕСЃРѕРІР°Р»Рё");
        }
 
       oBox.Hide();
@@ -158,7 +158,7 @@ function CommentSave(oBtn)
    }
   else
    {
-    alert("Поля 'Логин' и 'Пароль' не должны быть пусты");
+    alert("РџРѕР»СЏ 'Р›РѕРіРёРЅ' Рё 'РџР°СЂРѕР»СЊ' РЅРµ РґРѕР»Р¶РЅС‹ Р±С‹С‚СЊ РїСѓСЃС‚С‹");
     oBtn.disabled = false;
    }
  }
@@ -171,7 +171,7 @@ function RegistrationForm()
    {}
   else
    {
-    var oBox = new BoxClass("&nbsp;Форма регистрации",220,240,true,document.body.scrollTop,coord.x);
+    var oBox = new BoxClass("&nbsp;Р¤РѕСЂРјР° СЂРµРіРёСЃС‚СЂР°С†РёРё",220,240,true,document.body.scrollTop,coord.x);
     setGlobal("reg_box",oBox);
    }
 
@@ -189,12 +189,12 @@ function RegSave(oBtn)
    {
     if (oResponseVars.result == 1)
      {
-      alert("Регистрация прошла успешно.\r\nМожете оставлять комментарии");
+      alert("Р РµРіРёСЃС‚СЂР°С†РёСЏ РїСЂРѕС€Р»Р° СѓСЃРїРµС€РЅРѕ.\r\nРњРѕР¶РµС‚Рµ РѕСЃС‚Р°РІР»СЏС‚СЊ РєРѕРјРјРµРЅС‚Р°СЂРёРё");
       oBox.Hide();
      }
     else
      {
-      alert("Ошибка регистрации!");
+      alert("РћС€РёР±РєР° СЂРµРіРёСЃС‚СЂР°С†РёРё!");
       oBtn.disabled = false;
      }
    }
@@ -203,7 +203,7 @@ function RegSave(oBtn)
    {
     if (oResponseVars.result == 1)
      {
-      alert("Логин уже существует!");
+      alert("Р›РѕРіРёРЅ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚!");
       oBtn.disabled = false;
      }
     else
@@ -237,6 +237,6 @@ function RegSave(oBtn)
    }
   else
    {
-    alert("Поля 'Логин' и 'Пароль' не должны быть пусты");
+    alert("РџРѕР»СЏ 'Р›РѕРіРёРЅ' Рё 'РџР°СЂРѕР»СЊ' РЅРµ РґРѕР»Р¶РЅС‹ Р±С‹С‚СЊ РїСѓСЃС‚С‹");
    }
  }

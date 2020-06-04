@@ -1,8 +1,8 @@
 <% if (user_list.length>0) {%>
  <% for(i=0;i<user_list.length;i++) { %>
   <div class="user_item_area" id="user<%=i%>">
-   <input type="button" value="Óäàëèòü" onclick="DeleteUser('user<%=i%>',<%=user_list[i].UserID%>,this)" class="btn">
-   <input type="button" value="Óäàëèòü ñ êîììåíòàìè" onclick="DeleteUserComment('user<%=i%>',<%=user_list[i].UserID%>,this)" class="btn">
+   <input type="button" value="Ð£Ð´Ð°Ð»Ð¸Ñ‚ÑŒ" onclick="DeleteUser('user<%=i%>',<%=user_list[i].UserID%>,this)" class="btn">
+   <input type="button" value="Ð£Ð´Ð°Ð»Ð¸Ñ‚ÑŒ Ñ ÐºÐ¾Ð¼Ð¼ÐµÐ½Ñ‚Ð°Ð¼Ð¸" onclick="DeleteUserComment('user<%=i%>',<%=user_list[i].UserID%>,this)" class="btn">
    <%=user_list[i].Login%> <%=user_list[i].Name%> <%=user_list[i].Email%>
   </div>
  <% } %>

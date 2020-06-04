@@ -9,7 +9,7 @@ function DeleteUserComment(area_id,UserID,oBtn)
     else
      {
       oBtn.disabled = false;
-      alert("Ошибка удаления");
+      alert("РћС€РёР±РєР° СѓРґР°Р»РµРЅРёСЏ");
      }
    }
 
@@ -35,7 +35,7 @@ function DeleteUser(area_id,UserID,oBtn)
     else
      {
       oBtn.disabled = false;
-      alert("Ошибка удаления");
+      alert("РћС€РёР±РєР° СѓРґР°Р»РµРЅРёСЏ");
      }
    }
 
@@ -61,7 +61,7 @@ function OpenComment(area_id,CommentID,oBtn)
     else
      {
       oBtn.disabled = false;
-      alert("Ошибка удаления");
+      alert("РћС€РёР±РєР° СѓРґР°Р»РµРЅРёСЏ");
      }
    }
 
