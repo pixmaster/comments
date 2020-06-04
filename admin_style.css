@@ -1,0 +1,48 @@
+.btn
+ {
+  border: 1px solid black;
+  background:#E6F1D8;
+ }
+
+.comment_area
+ {
+  border:1px solid #5B5758;
+  font-size: 12px;
+  font-family: Arial;
+  font-weight: normal;
+  color:black;
+  background:#EBEBEB;
+  overflow:auto;
+ }
+.comment_btn
+ {
+  border:1px solid black;
+  font-size: 12px;
+  font-family: Arial;
+  font-weight: bold;
+  color:white;
+  background:#207839;
+ }
+
+.comment_item_area
+ {
+  border: 1px solid #39B54A;
+  margin: 3px 2px;
+  background:#EDF4F1;
+  padding: 2px
+ }
+
+.comment_title_area
+ {
+  padding: 1px;
+  background:#CCECD4;
+  font-size: 14px;
+  font-family: Verdana;
+ }
+
+.comment_image_area
+ {
+  background:#EDF7F1;
+  border-top:1px solid gray;
+  padding:2px;
+ }

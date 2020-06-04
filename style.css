@@ -1,0 +1,104 @@
+.box
+ {
+  border: 1px solid black;
+  background-color:white;
+  padding: 5px;
+ }
+
+.class_box
+ {
+  border: 1px solid black;
+  background-color:#F5EDE4;
+  top:120px;
+  left:200px;
+  position:absolute;
+  background: white;
+ }
+
+.class_boxTitle
+ {
+  background-color:gray;
+  height:20px;
+  padding: 5px;
+ }
+
+.class_boxBody
+ {
+  font-size: 16px;
+  font-family: Verdana;
+  font-weight: normal;
+  padding: 5px;
+  color:black;
+ }
+
+fieldset
+ {
+  padding: 0px 2px 4px 4px;
+  margin:0px;
+  border-color:#207839;
+  border-width:1px;
+ }
+
+legend
+ {
+  font-size: 14px;
+  font-family: Arial;
+  font-weight: bold;
+  padding: 1px;
+  margin:1px;
+  color:black;
+ }
+.comment_field
+ {
+  border:1px solid #5B5758;
+  font-size: 12px;
+  font-family: Arial;
+  font-weight: normal;
+  color:black;
+  background:#EBEBEB;
+  width:200px;
+ }
+
+.comment_area
+ {
+  border:1px solid #5B5758;
+  font-size: 12px;
+  font-family: Arial;
+  font-weight: normal;
+  color:black;
+  background:#EBEBEB;
+  width:450px;
+  overflow:auto;
+ }
+.comment_btn
+ {
+  border:1px solid black;
+  font-size: 12px;
+  font-family: Arial;
+  font-weight: bold;
+  color:white;
+  background:#207839;
+ }
+
+.comment_item_area
+ {
+  border: 1px solid #39B54A;
+  margin: 15px 2px;
+  background:#EDF4F1;
+  padding: 5px
+ }
+
+.comment_title_area
+ {
+  padding: 3px;
+  background:#CCECD4;
+  font-size: 14px;
+  font-family: Verdana;
+ }
+
+.comment_image_area
+ {
+  background:#EDF7F1;
+  border-top:1px solid gray;
+  padding:4px;
+ }

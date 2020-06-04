@@ -1,0 +1,43 @@
+<h2>Отзывы пользователей</h2>
+Общий рейтинг: <%=Rating%><br>
+Всего отзывов: <%=comment_list.length%><br>
+<input type="button" value="Регистрация" onclick="RegistrationForm()" class="comment_btn">
+<input type="button" value="Добавить отзыв если зарегистрированы" onclick="AddCommentForm()" class="comment_btn">
+<% if (comment_list.length>0) {%>
+ <% for(i=0;i<comment_list.length;i++) { %>
+  <div class="comment_item_area">
+   <div class="comment_title_area">
+    <div><b>Автор:</b> <%=(comment_list[i].Name?comment_list[i].Name:comment_list[i].Login)%></div>
+    <div><b>Дата:</b> <%=comment_list[i].CommentDate%> <%=comment_list[i].CommentTime%></div>
+   </div>
+   <ul>
+    <% if (comment_list[i].SaleDate != "") {%>
+     <li><b>Время покупки:</b> <%=comment_list[i].SaleDate%>
+    <% } %>
+    <% if (comment_list[i].StrongPoints != "") {%>
+     <li><b>Сильные стороны:</b> <%=comment_list[i].StrongPoints%>
+    <% } %>
+    <% if (comment_list[i].WeakPoints != "") {%>
+     <li><b>Слабые стороны:</b> <%=comment_list[i].WeakPoints%>
+    <% } %>
+    <% if (comment_list[i].Analogs != "") {%>
+     <li><b>Использованные аналоги:</b> <%=comment_list[i].Analogs%>
+    <% } %>
+    <% if (comment_list[i].CommentText != "") {%>
+     <li><b>Комментарий:</b> <%=comment_list[i].CommentText%>
+    <% } %>
+   </ul>
+   <div class="comment_image_area">
+    <% if (comment_list[i].Pic1 != "") {%>
+     <a href="/comment/images/<%=comment_list[i].Pic1%>" target="_blank"><img src="/comment/images/thumb_<%=comment_list[i].Pic1%>.jpg" border="0" hspace="3"></a>
+    <% } %>
+    <% if (comment_list[i].Pic2 != "") {%>
+     <a href="/comment/images/<%=comment_list[i].Pic2%>" target="_blank"><img src="/comment/images/thumb_<%=comment_list[i].Pic2%>.jpg" border="0" hspace="3"></a>
+    <% } %>
+    <% if (comment_list[i].Pic3 != "") {%>
+     <a href="/comment/images/<%=comment_list[i].Pic3%>" target="_blank"><img src="/comment/images/thumb_<%=comment_list[i].Pic3%>.jpg" border="0" hspace="3"></a>
+    <% } %>
+   </div>
+  </div>
+ <% } %>
+<% } %>

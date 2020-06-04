@@ -1,0 +1,55 @@
+<form method="POST" id="comment_form" style="margin:0px">
+<fieldset>
+ <legend>Логин, Пароль</legend>
+ <input type="text" id="comment_login" class="comment_field">
+ <input type="password" id="comment_pwd" class="comment_field">
+</fieldset>
+
+<fieldset>
+ <legend>Время покупки</legend>
+ <input type="text" id="SaleDate" class="comment_field">
+</fieldset>
+
+<fieldset>
+ <legend>Сильные стороны</legend>
+ <textarea id="StrongPoints" class="comment_area" rows="2"></textarea>
+</fieldset>
+
+<fieldset>
+ <legend>Слабые стороны</legend>
+ <textarea id="WeakPoints" class="comment_area" rows="2"></textarea>
+</fieldset>
+
+<fieldset>
+ <legend>Использованные аналоги</legend>
+ <textarea id="Analogs" class="comment_area" rows="2"></textarea>
+</fieldset>
+
+<fieldset>
+ <legend>Комментарий</legend>
+ <textarea id="CommentText" class="comment_area" rows="4"></textarea>
+</fieldset>
+<fieldset>
+ <legend>Рейтинг</legend>
+ 1
+ <input type="radio" name="rating" value="1">
+ <input type="radio" name="rating" value="2">
+ <input type="radio" name="rating" value="3">
+ <input type="radio" name="rating" value="4">
+ <input type="radio" name="rating" value="5">
+ 5
+</fieldset>
+</form>
+<form method="POST" action="/comment/index.php" id="comment_form_upload" enctype="multipart/form-data" target="upload_file_frame" style="margin:0px">
+<input type="hidden" name="action" value="upload">
+<input type="hidden" name="plugin" value="comment">
+<input type="hidden" name="login" value="">
+<input type="hidden" name="pwd" value="">
+<fieldset>
+ <legend>Картинки:</legend>
+ <input type="file" name="comment_pic[]" class="comment_field" style="width:145px">
+ <input type="file" name="comment_pic[]" class="comment_field" style="width:145px">
+ <input type="file" name="comment_pic[]" class="comment_field" style="width:145px">
+</fieldset>
+</form><br>
+<input type="button" value="Сохранить" class="comment_btn" onclick="CommentSave(this)">

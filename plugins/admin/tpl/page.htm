@@ -1,0 +1,103 @@
+<html>
+<head>
+ <title>new</title>
+ <script language="JavaScript" type="text/javascript" src="/comment/index.php?load_script=ajax"></script>
+ <script language="JavaScript" type="text/javascript" src="/comment/index.php?load_script=tools"></script>
+ <script language="JavaScript" type="text/javascript" src="/comment/index.php?load_script=tpl"></script>
+ <script language="JavaScript" type="text/javascript" src="/comment/index.php?load_script=box"></script>
+ <script language="JavaScript" type="text/javascript" src="/comment/index.php?load_script=cover"></script>
+ <link rel="StyleSheet" href="/comment/admin_style.css" type="text/css">
+
+<style type="text/css">
+#MenuArea
+ {
+  padding:0px;
+  background-color:white;
+  border:1px solid #BDBEBF;
+  width:175px;
+ }
+
+#MenuArea DIV
+ {
+  padding:2px;
+  margin:1px;
+  background-color:#EEEEDD;
+  cursor:pointer;
+ }
+
+#MenuArea .MenuItemDesc
+ {
+  background-color:#E2DECC;
+  cursor:default;
+  font-weight: bold;
+  border-top: 1px solid black;
+ }
+
+#MenuArea SPAN
+ {
+  font-size:2px;
+  height:2px;
+  padding:0px;
+  margin:0px;
+ }
+
+</style>
+</head>
+<body>
+
+<table border="0" cellspacing="0" cellpadding="0">
+ <tr>
+  <td valign="top">
+   <div id="MenuArea">
+    <!--div class="MenuItemDesc">Основное</div-->
+    <div onClick="ListComment()">Непроверенные комменты</div>
+    <div onClick="ListOpenComment()">Проверенные комменты</div>
+    <div onClick="ListUser()">Пользователи</div>
+   </div>
+  </td>
+  <td valign="top" style="padding-left:10px"><div id="MainArea"></div></td>
+ </tr>
+</table>
+
+<script language="JavaScript"><!--
+var oMainArea = false;
+var oTPL      = null;
+var ProductID = '{ID}';
+
+function ListComment()
+ {
+  oTPL.insertAJAX(oMainArea,
+                  "list_comment",
+                  "/comment/index.php?load_tpl=list_comment&plugin=admin",
+                  "/comment/index.php",
+                  {"plugin":"admin","action":"list_comment"});
+ }
+
+function ListOpenComment()
+ {
+  oTPL.insertAJAX(oMainArea,
+                  "list_comment",
+                  "/comment/index.php?load_tpl=list_comment&plugin=admin",
+                  "/comment/index.php",
+                  {"plugin":"admin","action":"list_open_comment"});
+ }
+
+function ListUser()
+ {
+  oTPL.insertAJAX(oMainArea,
+                  "list_user",
+                  "/comment/index.php?load_tpl=list_user&plugin=admin",
+                  "/comment/index.php",
+                  {"plugin":"admin","action":"list_user"});
+ }
+
+
+window.onload = function()
+ {
+  oMainArea = getElementById("MainArea");
+  oTPL      = new TplClass();
+  oTPL.LoadScript('list','/comment/index.php?load_script=admin&plugin=admin',ListComment);
+ }
+//--></script>
+</body>
+</html>
